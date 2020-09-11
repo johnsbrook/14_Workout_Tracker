@@ -1,9 +1,9 @@
 // Setting up Mongoose requirement for schema;
 const mongoose = require("mongoose");
-                console.log("This is mongoose", mongoose);
+                // console.log("This is mongoose", mongoose);
 // Setting up Schema variable using mongoose.Schema;
 const Schema = mongoose.Schema;
-                console.log("This is Schema in mongoose", Schema);
+                // console.log("This is Schema in mongoose", Schema);
 
 // Setting up Schema to be used as a requirement;
 const workoutSchema = new Schema({
@@ -13,6 +13,8 @@ const workoutSchema = new Schema({
         type: Date,
         default: Date.now
     }, 
+
+    // Setting exercises: with an array of objects;
     exercises: [{
         type: {
             type: String,
