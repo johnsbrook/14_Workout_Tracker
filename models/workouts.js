@@ -4,18 +4,34 @@ const Schema = mongoose.Schema;
 
 // Building model for database
 const workoutSchema = new Schema({
-    day: {type: Date, default: Date.now}, 
-    exercises: [{
-        type: {type: String, required: true},
-        name: {type: String, required: true},
-        duration: {type: Number, required: true},
-        weight: {type: Number, required: true},
-        reps: {type: Number, required: true}, 
-        sets: {types: Number, required: true}
-    }]
-})
+
+    day: {
+        type: Date,
+    },
+    exercises: [
+        {
+            type: {
+                type: String,              
+            },
+            name: { 
+                type: String,                
+            },
+            duration: { 
+                type: Number, 
+            },
+            weight: { 
+                type: Number, 
+            },
+            reps: { 
+                type: Number, 
+            },
+            sets: { 
+                type: Number,  
+            }
+        }]
+});
 
 // Declare const to be exported
-const Workout = mongoose.model("workout", workoutSchema);
+const Workout = mongoose.model("Workout", workoutSchema);
 // Exporting Workout module
 module.exports = Workout;
