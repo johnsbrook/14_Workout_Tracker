@@ -7,40 +7,44 @@ const Schema = mongoose.Schema;
 
 // Setting up Schema to be used as a requirement;
 const workoutSchema = new Schema({
+
+    // Setting day: with type and default value
     day: {
         type: Date,
         default: Date.now
     }, 
-    exercises: [
-        {
-            type: {
-                type: String,
-                trim: true,
-                required: "Please, enter the type of exercise."
-            },
-            name: {
-                type: String,
-                trim: true,
-                required: "Please, enter the exercise's name."
-            },
-            duration: {
-                type: Number,
-                unique: false,
-                required: true
-            },
-            weight: {
-                type: Number,
-                unique: false,
-                required: true
-            },
-            reps: {
-                type: 
-            },
-            sets: {
-
-            }
+    exercises: [{
+        type: {
+            type: String,
+            trim: true,
+            required: "Please, enter the type of exercise."
+        },
+        name: {
+            type: String,
+            trim: true,
+            required: "Please, enter the exercise's name."
+        },
+        duration: {
+            type: Number,
+            unique: false,
+            required: true
+        },
+        weight: {
+            type: Number,
+            unique: false,
+            required: true
+        },
+        reps: {
+            type: Number,
+            unique: false,
+            required: true 
+        },
+        sets: {
+            type: Number,
+            unique: false,
+            required: true
         }
-    ]
+    }]
 })
 
 // Setting up Schema as a model;
