@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
 });
 
 // Requiring api.js
-app.use(require("./public/api.js"));
+// app.use(require("./public/api.js"));
 
 // Port listening 
 app.listen(PORT, () => {
