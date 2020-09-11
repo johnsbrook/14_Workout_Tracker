@@ -6,8 +6,9 @@ let db = require("../models/workouts.js");
 //   useFindAndModify: false
 // });
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/imageperformance", {
-  useNewUrlParser: true
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
+  useNewUrlParser: true;
+  useFindAndModify: false
 });
 
 let workoutSeed = [
@@ -146,8 +147,7 @@ db.Workout.deleteMany({})
     console.log(data.result.n + " records inserted!");
     process.exit(0);
   })
-
-  // .catch(err => {
-  //   console.error(err);
-  //   process.exit(1);
-  // });
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
