@@ -27,7 +27,7 @@ mongoose.connect("mongodb://localhost/workout", {
 });
 
 // routes
-// app.use(require("./routes/api-routes.js"));
+app.use(require("./routes/api-routes.js"));
 app.use(require("./routes/html-routes.js"));
 
 // Creating an event listener to allow app to run using const PORT
