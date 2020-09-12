@@ -8,6 +8,8 @@ router.get("/exercise", (req, res) => {
 });
 
 // GET /stats and use ../public/stats.html file path
-router.get("/stats", (req,res) => {
+router.get("/stats", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
 });
+
+module.exports = router;
