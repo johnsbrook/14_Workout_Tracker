@@ -4,7 +4,7 @@
 
 ## Description 
  
-This is a workout tracker developed with NodeJS using  Mongo DB with a Mongoose schema and Express route handling. 
+This is a workout tracker developed with Node.js using MongoDB, Mongoose and Express. 
 
 
 ## Table of Contents 
